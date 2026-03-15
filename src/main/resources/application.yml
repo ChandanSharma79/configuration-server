@@ -1,0 +1,28 @@
+server:
+  port: 9096
+spring:
+  application:
+    name: configuration-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ChandanSharma79/configuration-server
+          clone-on-start: true
+  security:
+    user:
+      name: root
+      password: secret
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+
+
+
+
